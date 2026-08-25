@@ -9,8 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@prisma/client": "^7.10.0",
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "7.9.1",
+    "dotenv": "^17.4.2",
     "next": "16.3.3",
+    "pg": "^8.23.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "zod": "^4.4.3"
@@ -18,12 +21,13 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autocannon": "^8.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
-    "prisma": "^8.0.0-rc.10",
+    "prisma": "7.9.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
