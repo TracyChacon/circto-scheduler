@@ -63,7 +63,10 @@ export async function GET(request: Request) {
     return NextResponse.json({ success: true, slots });
   } catch (error: unknown) {
     if (error instanceof z.ZodError) {
-      return NextResponse.json({ success: false, error: error.errors }, { status: 400 });
+      return NextResponse.json(
+        { success: false, error: 'Validation Error', details: error.issues },
+        { status: 400 }
+      );
     }
     return NextResponse.json({ success: false, error: 'Internal Server Error' }, { status: 500 });
   }
